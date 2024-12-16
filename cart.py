@@ -16,9 +16,9 @@ class Cart:
         else:
             raise KeyError(f"{product.name} is not in the cart.")
     def calculate_total(self):
+        """Calcule le total brut du panier sans appliquer de remise"""
         total = sum(product.price * quantity for product, quantity in self.items.items())
-        total_after_discount = total - (total * self.discount)
-        return total_after_discount
+        return total
     def display_cart(self):
         if not self.items:
             return "Your cart is empty."
@@ -43,13 +43,16 @@ class Cart:
         if discount_percentage < 0 or discount_percentage > 100:
             print(f"[apply_discount] Erreur : {discount_percentage}% n'est pas un pourcentage valide. Il doit être entre 0 et 100.")
             raise ValueError("Discount percentage must be between 0 and 100.")
-    
-        # Calcul du total brut
-        self.base_total = sum(product.price * quantity for product, quantity in self.items.items())
-        print(f"[apply_discount] Total brut calculé : {self.base_total}€")
-    
+        
+        # Calcul du total brut avant remise
+        total = self.calculate_total()  # Utilisez la méthode calculate_total() pour obtenir le total
+        print(f"[apply_discount] Total brut calculé : {total}€")
+        
         # Application de la remise
-        self.discounted_total = self.base_total * (1 - discount_percentage / 100)
-        print(f"[apply_discount] Remise appliquée : {self.base_total - self.discounted_total}€")
-    
-        return self.discounted_total
+        discount_amount = (total * discount_percentage) / 100  # Calcul de la remise
+        discounted_total = total - discount_amount  # Appliquer la remise
+        
+        print(f"[apply_discount] Remise appliquée : {discount_amount}€, Total après remise : {discounted_total}€")
+        
+        return discounted_total
+
