@@ -36,4 +36,11 @@ class Cart:
         else:
             self.items.clear()
             print("Votre panier a été vidé.")
+    def apply_discount(self, discount_percentage: float):
+        """Applique une réduction et calcule le total réduit."""
+        if discount_percentage < 0 or discount_percentage > 100:
+            raise ValueError("Discount percentage must be between 0 and 100.")
+        self.calculate_total()  # Assure le calcul du total brut avant la réduction
+        self.discounted_total = (self.base_total * discount_percentage) / 100
+        return self.discounted_total
 
