@@ -24,15 +24,18 @@ def main():
         print(f"\nPrix avant réduction : {base_total:.2f}€")
 
         # Application d'une réduction de 20%
-        discounted_total = cart.apply_discount(30)
+        discounted_total = cart.apply_discount(20)
         print(f"Prix de la réduction : {discounted_total:.2f}€")
-        print(f"Montant après la réduction (30%): {(base_total - discounted_total):.2f}€")
+        print(f"Montant après la réduction (20%): {(base_total - discounted_total):.2f}€")
         
 
     except ValueError as e:
         print(f"Erreur : {e}")
 
     # Exemple de vidage du panier
+    cart.clear_cart()
+    print("\nPanier vidé !")
+    print(cart.display_cart())
 
 if __name__ == "__main__":
     main()
