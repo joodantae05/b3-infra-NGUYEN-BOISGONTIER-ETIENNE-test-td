@@ -41,7 +41,7 @@ US 5 : CLEAR CART 🟢 (test validé)
 Critère d'acceptation : 
 - Il faut qu'il y ait des produits dans mon panier.
 
-US 6 : CHECKOUT PROCESS 🔴
+US 6 : CHECKOUT PROCESS 🟢 (test validé)
 - En tant qu'utilisateur
 - Je veux pouvoir passer à l'étape de paiement pour finaliser mon achat
 - Afin de pouvoir acheter les produits dans mon panier
