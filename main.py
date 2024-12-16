@@ -17,7 +17,6 @@ def main():
     try:
         cart.add_product(p1, 1)
         cart.add_product(p2, 2)
-        cart.clear_cart()
     except ValueError as e:
         print(f"Error: {e}")
 

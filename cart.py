@@ -15,23 +15,10 @@ class Cart:
             del self.items[product]
         else:
             raise KeyError(f"{product.name} is not in the cart.")
-
-    def apply_discount(self):
-        # Calcul de la remise : par exemple, 10% de remise si l'utilisateur a plus de 5 articles dans le panier
-        total_items = sum(self.items.values())
-        if total_items >= 5:  # Remise si 5 articles ou plus
-            self.discount = 0.10  # 10% de remise
-        elif total_items >= 3:  # Remise si 3 à 4 articles
-            self.discount = 0.05  # 5% de remise
-        else:
-            self.discount = 0  # Pas de remise
-        print(f"Discount applied: {self.discount * 100}%")
-
     def calculate_total(self):
         total = sum(product.price * quantity for product, quantity in self.items.items())
         total_after_discount = total - (total * self.discount)
         return total_after_discount
-
     def display_cart(self):
         if not self.items:
             return "Your cart is empty."
@@ -40,7 +27,7 @@ class Cart:
         total = self.calculate_total()
         return f"{cart_display}\nTotal (after discount): {total:.2f}€"
     def clear_cart(self):
-        """Supprime tous les articles du panier"""
+        """Supprime tous les articles du p  anier"""
         if not hasattr(self, 'items') or not isinstance(self.items, (list, dict)):
             print("Erreur : Le panier n'existe pas ou n'est pas correctement défini.")
             return

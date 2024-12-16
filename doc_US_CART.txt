@@ -23,6 +23,8 @@ US 3 : DISPLAY CART
 Critère d'acceptation : 
 - Il faut qu'il y ait des produits dans mon panier.
 
+-------------- NOUVELLES FONCTIONNALITES ------------------
+
 US 4 : APPLY DISCOUNT
 - En tant que vendeur
 - Je veux appliquer une remise au panier de mes acheteurs par rapport au nombre d'article acheté
