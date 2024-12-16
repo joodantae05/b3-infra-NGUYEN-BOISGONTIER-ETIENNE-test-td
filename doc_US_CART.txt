@@ -15,7 +15,6 @@ US 2 : REMOVE PRODUCT
 Critère d'acceptation : 
 - Il faut que mon produit soit dans mon panier 
 
-
 US 3 : DISPLAY CART
 - En tant qu'utilisateur 
 - Je veux savoir quel est le montant total de mon panier
@@ -48,4 +47,3 @@ US 6 : CHECKOUT PROCESS
 Critère d'acceptation :
 - L'utilisateur doit pouvoir accéder à une page de paiement avec tous les produits du panier.
 - L'utilisateur doit voir un récapitulatif complet des produits, des remises et des frais de livraison.
-
