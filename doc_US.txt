@@ -1,0 +1,115 @@
+---------- CART -------------
+US 1 : ADD PRODUCT
+- En tant qu'utilisateur
+- Je veux ajouter un produit dans mon panier 
+- Afin de pouvoir l'acheter 
+
+Critère d'acceptation : 
+- Il faut que l'article sélectionné soit disponible dans le stock
+
+US 2 : REMOVE PRODUCT
+- En tant qu'utilisateur 
+- Je veux retirer un produit de mon panier
+- Afin de pouvoir de soustraire à mon panier
+
+Critère d'acceptation : 
+- Il faut que mon produit soit dans mon panier 
+
+US 3 : DISPLAY CART
+- En tant qu'utilisateur 
+- Je veux savoir quel est le montant total de mon panier
+- Afin de pouvoir voir le prix total
+
+Critère d'acceptation : 
+- Il faut qu'il y ait des produits dans mon panier.
+
+-------------- NOUVELLES FONCTIONNALITES ------------------
+
+US 4 : APPLY DISCOUNT 🟢 (test validé)
+- En tant que vendeur
+- Je veux appliquer une remise au panier de mes acheteurs par rapport au nombre d'article acheté
+- Afin de pouvoir fidéliser mes acheteur
+
+Critère d'acceptation : 
+- Il faut qu'il y ait des produits dans son panier.
+
+US 5 : CLEAR CART 🟢 (test validé)
+- En tant qu'utilisateur 
+- Je veux pouvoir supprimer entièrement mon panier en un clic
+- Afin de pouvoir créer un nouveau panier avec de nouveau d'articles
+
+Critère d'acceptation : 
+- Il faut qu'il y ait des produits dans mon panier.
+
+US 6 : CHECKOUT PROCESS 🟢 (test validé)
+- En tant qu'utilisateur
+- Je veux pouvoir passer à l'étape de paiement pour finaliser mon achat
+- Afin de pouvoir acheter les produits dans mon panier
+
+Critère d'acceptation :
+- L'utilisateur doit pouvoir accéder à une page de paiement avec tous les produits du panier.
+- L'utilisateur doit voir un récapitulatif complet des produits, des remises et des frais de livraison.
+
+
+---------- ORDER -------------
+US 1 : INIT 
+- En tant qu'utilisateur
+- Je veux crée une commande à partir du panier
+- Pour valider mon achat
+
+Condition d'acceptation : 
+- La commande ne peux pas être crée si le panier est valider
+- La commande doit inclure tous les articles du panier ainsi que leurs quantité
+- Le montant du panier doit être calculer
+
+US 2 : PLACE ORDER
+-En tant qu'utilisateur
+- Je veux pouvoir passer une commande
+- Pour que les stocks du produit soit réduit
+Condition d'acceptation:
+- Chaque produit commandé doient avoir son stocks mis à jour en fonction de la quantité commandé
+- Une confirmation indiquant le total doit être affiché
+
+US 3 : VIEW ORDER
+- En tant qu'utilisateur
+- Je veux pouvoir voir le détail de ma commande
+- Pour voir les articles acheter et le total
+
+Condition d'acceptation : 
+- Les detrails de la commande doivent afficher le nom des produit, la quantité achetée et le total de la commande
+- Le format d'affichage doit être lisible , avec un prix total correctement formaté.
+
+
+-------------- NOUVELLES FONCTIONNALITES ------------------
+
+US 4 : 🔴
+- En tant qu'utilisateur 
+- Je veux pouvoir annuler ma commande
+- Puis récuprer les produit de la commande dans mon panier pour ajuster la commande
+
+Condition d'acceptation :
+- La commande peut être annuler si elle n'a pas encore était expédié
+- Les produits et leurs quantités doivent être retourner dans le panier
+- Les stocks des produits doivent être réajustés en conséquence
+- Un message de confirmation doit indiquer que la commande a été annulée avec succès
+
+US 5 : 🔴
+- En tant qu'utilisateur 
+- Je veux pouvoir choisir une date et une heure de livraison
+- Pour m'assurer que ma commande à l'heure souhaitez 
+
+Condition d'acceptation :
+-L'utilisateur peut sélectionner une date et une heure de livraison après avoir placé sa commande.
+-La date choisie doit être dans une plage de jours raisonnables (par exemple, pas de date dans le passé).
+-Un message récapitulatif doit inclure la date et l'heure de livraison prévue.
+
+US 6 : 🔴
+-En tant qu'utilisateur
+-Je veux pouvoir suivre l'état ma commande
+-Pour savoir ou en est le traitement de celle-ci 
+
+Conditions d'acceptations : 
+-Une commande peut avoir plusieurs statuts : "En attente", "Préparation", "Expédiée", et "Livrée".
+-L'état actuel de la commande doit être visible à tout moment.
+-Une mise à jour automatique du statut doit être possible au fur et à mesure de l'avancement du traitement.
+-L'utilisateur doit recevoir une notification (ou un message) lorsque l'état de la commande change. 
