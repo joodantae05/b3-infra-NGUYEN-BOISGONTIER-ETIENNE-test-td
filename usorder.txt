@@ -1,0 +1,34 @@
+Order
+US1:
+- En tant qu'utilisateur 
+- Je veux crée une commande à partir du panier
+- Pour valider mon achat
+Condition d'acceptation : 
+- La commande ne peux pas être crée si le panier est valider
+- La commande doit inclure tous les articles du panier ainsi que leurs quantité
+- Le montant du panier doit être calculer
+US2 : 
+-En tant qu'utilisateur
+- Je veux pouvoir passer une commande
+- Pour que les stocks du produit soit réduit
+Condition d'acceptation:
+-Chaque produit commandé doient avoir son stocks mis à jour en fonction de la quantité commandé
+-Une confirmation indiquant le total doit être affiché
+US3 : 
+-En tant qu'utilisateur
+-Je veux pouvoir voir le détail de ma commande
+-Pour voir les articles acheter et le total
+Condition d'acceptation : 
+-Les detrails de la commande doivent afficher le nom des produit, la quantité achetée et le total de la commande
+-Le format d'affichage doit être lisible , avec un prix total correctement formaté.
+
+US4: 
+-En tant qu'utilisateur 
+-Je veux pouvoir annuler ma commande
+-Puis récuprer les produit de la commande dans mon panier pour ajuster la commande
+Condition d'acceptation :
+- La commande peut être annuler si elle n'a pas encore était expédié
+- Les produits et leurs quantités doivent être retourner dans le panier
+- Les stocks des produits doivent être réajustés en conséquence 
+- Un message de confirmation doit indiquer que la commande a été annulée avec succès
+US5: 
