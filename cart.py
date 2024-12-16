@@ -40,19 +40,17 @@ class Cart:
         total = self.calculate_total()
         return f"{cart_display}\nTotal (after discount): {total:.2f}€"
 
-def clear_cart(self):
-    """Supprime tous les articles du panier"""
-    if not hasattr(self, 'items') or not isinstance(self.items, (list, dict)):
-        print("Erreur : Le panier n'existe pas ou n'est pas correctement défini.")
-        return
-    
-    if len(self.items) == 0:
-        print("Votre panier est déjà vide.")
-    else:
-        self.items.clear()
-        print("Votre panier a été vidé.")
+    def clear_cart(self):
+        """Supprime tous les articles du panier"""
+        if not hasattr(self, 'items') or not isinstance(self.items, (list, dict)):
+            print("Erreur : Le panier n'existe pas ou n'est pas correctement défini.")
+            return
 
-
+        if len(self.items) == 0:
+            print("Votre panier est déjà vide.")
+        else:
+            self.items.clear()
+            print("Votre panier a été vidé.")
     def checkout(self):
         """Affiche le récapitulatif de la commande avant le paiement"""
         if not self.items:
