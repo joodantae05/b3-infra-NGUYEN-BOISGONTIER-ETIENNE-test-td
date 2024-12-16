@@ -66,21 +66,25 @@ class Cart:
         # Affichage des produits dans le panier
         for product, quantity in self.items.items():
             print(f"{product.name} x {quantity} - {product.price * quantity}€")
-
-        # Calcul de la remise
-        discount_amount = self.base_total * self.discount
+    
+        # Calcul du total brut avant remise
+        total_without_discount = self.calculate_total()
+        print(f"Total without discount: {total_without_discount:.2f}€")
+        
+        # Si une remise a été appliquée, calculez le montant de la remise
+        discount_amount = (total_without_discount * self.discount) / 100
         print(f"Discount applied: {discount_amount:.2f}€")
-
-        # Calcul des frais de livraison (si applicable)
-        total_with_shipping = self.calculate_total() + self.shipping_fee
-        print(f"Shipping Fee: {self.shipping_fee:.2f}€")
-
-        # Affichage du total
-        total_final = total_with_shipping
+    
+        # Calcul des frais de livraison (ajustez selon votre logique)
+        shipping_fee = 5.0  # Frais de livraison fixes pour l'exemple
+        print(f"Shipping Fee: {shipping_fee:.2f}€")
+    
+        # Calcul du total final : total brut - remise + frais de livraison
+        total_final = total_without_discount - discount_amount + shipping_fee
         print(f"Total to pay (including shipping): {total_final:.2f}€")
         
         print("------------------------------------")
         print("Proceed to payment...")
-
+    
         return total_final
-
+    
