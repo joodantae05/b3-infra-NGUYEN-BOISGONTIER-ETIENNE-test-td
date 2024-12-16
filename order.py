@@ -18,7 +18,3 @@ class Order:
         return "\n".join([f"{product.name} x {quantity}" for product, quantity in self.items.items()]) + \
                f"\nTotal: {self.total:.2f}€"
 
-    def get_delivery_date(self, delivery_days: int = 3):
-
-        delivery_datetime = self.order_date + timedelta(days=delivery_days)
-        return delivery_datetime.strftime("%Y-%m-%d %H:%M")

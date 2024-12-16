@@ -3,12 +3,8 @@ from product import Product
 class Cart:
     def __init__(self):
         self.items = {}  # {product: quantity}
-<<<<<<< HEAD
         self.discounted_total = 0  # Total après application de la réduction
         self.base_total = 0        # Total avant réduction
-=======
-        self.discount = 0  # Pour stocker le montant de la remise appliquée
->>>>>>> d2f0976b9f8766d90a34195b0331b8d928e13d8e
 
     def add_product(self, product: Product, quantity: int):
         if product.stock < quantity:
@@ -21,19 +17,6 @@ class Cart:
         else:
             raise KeyError(f"{product.name} is not in the cart.")
     def calculate_total(self):
-<<<<<<< HEAD
-        """Calcule le total brut sans réduction."""
-        self.base_total = sum(product.price * quantity for product, quantity in self.items.items())
-        return self.base_total
-
-    def apply_discount(self, discount_percentage: float):
-        """Applique une réduction et calcule le total réduit."""
-        if discount_percentage < 0 or discount_percentage > 100:
-            raise ValueError("Discount percentage must be between 0 and 100.")
-        self.calculate_total()  # Assure le calcul du total brut avant la réduction
-        self.discounted_total = (self.base_total * discount_percentage) / 100
-        return self.discounted_total
-=======
         """Calcule le total brut du panier sans appliquer de remise"""
         total = sum(product.price * quantity for product, quantity in self.items.items())
         return total
@@ -106,4 +89,3 @@ class Cart:
     
         return total_final
     
->>>>>>> d2f0976b9f8766d90a34195b0331b8d928e13d8e
