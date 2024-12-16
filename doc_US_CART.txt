@@ -25,7 +25,7 @@ Critère d'acceptation :
 
 -------------- NOUVELLES FONCTIONNALITES ------------------
 
-US 4 : APPLY DISCOUNT
+US 4 : APPLY DISCOUNT 🔴
 - En tant que vendeur
 - Je veux appliquer une remise au panier de mes acheteurs par rapport au nombre d'article acheté
 - Afin de pouvoir fidéliser mes acheteur
@@ -33,7 +33,7 @@ US 4 : APPLY DISCOUNT
 Critère d'acceptation : 
 - Il faut qu'il y ait des produits dans son panier.
 
-US 5 : CLEAR CART
+US 5 : CLEAR CART 🟢
 - En tant qu'utilisateur 
 - Je veux pouvoir supprimer entièrement mon panier en un clic
 - Afin de pouvoir créer un nouveau panier avec de nouveau d'articles
@@ -41,7 +41,7 @@ US 5 : CLEAR CART
 Critère d'acceptation : 
 - Il faut qu'il y ait des produits dans mon panier.
 
-US 6 : CHECKOUT PROCESS
+US 6 : CHECKOUT PROCESS 🔴
 - En tant qu'utilisateur
 - Je veux pouvoir passer à l'étape de paiement pour finaliser mon achat
 - Afin de pouvoir acheter les produits dans mon panier
