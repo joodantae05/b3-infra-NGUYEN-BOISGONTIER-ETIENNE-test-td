@@ -1,19 +1,5 @@
 import unittest
-
-class Cart:
-    def __init__(self):
-        self.items = []
-
-    def clear_cart(self):
-        """Supprime tous les articles du panier"""
-        if not hasattr(self, 'items') or not isinstance(self.items, (list, dict)):
-            print("Erreur : Le panier n'existe pas ou n'est pas correctement défini.")
-            return
-        if len(self.items) == 0:
-            print("Votre panier est déjà vide.")
-        else:
-            self.items.clear()
-            print("Votre panier a été vidé.")
+from cart import Cart
 
 class TestCart(unittest.TestCase):
 
