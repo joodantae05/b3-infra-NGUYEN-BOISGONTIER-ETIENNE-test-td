@@ -55,4 +55,32 @@ class Cart:
         print(f"[apply_discount] Remise appliquée : {discount_amount}€, Total après remise : {discounted_total}€")
         
         return discounted_total
+    def checkout(self):
+        """Processus de validation du panier pour la page de paiement"""
+        if not self.items:
+            raise ValueError("Your cart is empty. You must add items to the cart to proceed.")
+        
+        print("--------- Checkout Summary ---------")
+        print("Product Details:")
+        
+        # Affichage des produits dans le panier
+        for product, quantity in self.items.items():
+            print(f"{product.name} x {quantity} - {product.price * quantity}€")
+
+        # Calcul de la remise
+        discount_amount = self.base_total * self.discount
+        print(f"Discount applied: {discount_amount:.2f}€")
+
+        # Calcul des frais de livraison (si applicable)
+        total_with_shipping = self.calculate_total() + self.shipping_fee
+        print(f"Shipping Fee: {self.shipping_fee:.2f}€")
+
+        # Affichage du total
+        total_final = total_with_shipping
+        print(f"Total to pay (including shipping): {total_final:.2f}€")
+        
+        print("------------------------------------")
+        print("Proceed to payment...")
+
+        return total_final
 
