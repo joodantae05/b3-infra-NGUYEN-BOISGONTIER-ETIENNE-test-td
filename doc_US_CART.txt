@@ -1,0 +1,51 @@
+CART : 
+US 1 : ADD PRODUCT
+- En tant qu'utilisateur
+- Je veux ajouter un produit dans mon panier 
+- Afin de pouvoir l'acheter 
+
+Critère d'acceptation : 
+- Il faut que l'article sélectionné soit disponible dans le stock
+
+US 2 : REMOVE PRODUCT
+- En tant qu'utilisateur 
+- Je veux retirer un produit de mon panier
+- Afin de pouvoir de soustraire à mon panier
+
+Critère d'acceptation : 
+- Il faut que mon produit soit dans mon panier 
+
+
+US 3 : DISPLAY CART
+- En tant qu'utilisateur 
+- Je veux savoir quel est le montant total de mon panier
+- Afin de pouvoir voir le prix total
+
+Critère d'acceptation : 
+- Il faut qu'il y ait des produits dans mon panier.
+
+US 4 : APPLY DISCOUNT
+- En tant que vendeur
+- Je veux appliquer une remise au panier de mes acheteurs par rapport au nombre d'article acheté
+- Afin de pouvoir fidéliser mes acheteur
+
+Critère d'acceptation : 
+- Il faut qu'il y ait des produits dans son panier.
+
+US 5 : CLEAR CART
+- En tant qu'utilisateur 
+- Je veux pouvoir supprimer entièrement mon panier en un clic
+- Afin de pouvoir créer un nouveau panier avec de nouveau d'articles
+
+Critère d'acceptation : 
+- Il faut qu'il y ait des produits dans mon panier.
+
+US 6 : CHECKOUT PROCESS
+- En tant qu'utilisateur
+- Je veux pouvoir passer à l'étape de paiement pour finaliser mon achat
+- Afin de pouvoir acheter les produits dans mon panier
+
+Critère d'acceptation :
+- L'utilisateur doit pouvoir accéder à une page de paiement avec tous les produits du panier.
+- L'utilisateur doit voir un récapitulatif complet des produits, des remises et des frais de livraison.
+
